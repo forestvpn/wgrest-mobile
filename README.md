@@ -20,7 +20,7 @@ lib
 ├── repositories
 ├── utils
 ├── main.dart
-└── movies_app.dart
+└── wgrest_app.dart
 ```
 
 # Development
