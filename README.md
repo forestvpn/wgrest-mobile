@@ -6,6 +6,23 @@ WGRest Mobile App
 - ForestVPN.com [Free VPN](https://forestvpn.com) for all
 - SpaceV.net [VPN for teams](https://spacev.net)
 
+# Structure
+
+```
+lib
+├── features
+│   ├── home
+│   └── peer
+├── ui
+│   ├── widgets
+│   └── theme
+├── router
+├── repositories
+├── utils
+├── main.dart
+└── movies_app.dart
+```
+
 # Development
 
 ## Routing
