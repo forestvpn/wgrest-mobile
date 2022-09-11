@@ -2,6 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:wgrest/router/router.dart';
 
+import 'package:wgrest/ui/widgets/device_list.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -11,16 +13,21 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Device List'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () => _openAddNewPeerScreen(context),
-          child: const Text('Add new Peer'),
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: const <Widget>[
+          Expanded(child: DeviceList())
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => _openAddNewDeviceScreen(context),
+        tooltip: 'New Device',
+        child: const Icon(Icons.add),
       ),
     );
   }
 
-  void _openAddNewPeerScreen(BuildContext context) {
-    AutoRouter.of(context).push(const AddNewPeerScreenRoute());
+  void _openAddNewDeviceScreen(BuildContext context) {
+    AutoRouter.of(context).push(const AddNewDeviceScreenRoute());
   }
 }
