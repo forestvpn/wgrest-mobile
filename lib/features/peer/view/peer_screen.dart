@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-
-import '../../../router/router.gr.dart';
+import 'package:wgrest/router/router.dart';
 
 class PeerScreen extends StatelessWidget {
   const PeerScreen({Key? key}) : super(key: key);
